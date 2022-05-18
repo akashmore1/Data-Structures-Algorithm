@@ -86,3 +86,22 @@ We say that an algorithm is O(f(n)) if the number of simple operations the compu
 1. Most primitives (booleans, numbers, undefined, null) are constant space.
 2. Strings require O(n) space (where n is the string length).
 3. Reference types are generally O( n), where n is the length (for arrays) or the number of keys (for objects).
+
+## Logarithms
+
+1. We've encountered some of the most common complexities: O(1), O(n), O(n^2)
+2. Sometimes big O expressions involve more complex mathematical expressions
+3. One that appears more often than you might like is the logarithm!
+4. Logarithmic complexity is considered Good.
+
+### What is Logarithm?
+
+![Logarithm](./Logarithm.png)
+
+### Logarithm Examples
+
+![LogarithmExamples](./LogarithmExample.png)
+
+## Big O recap
+
+![Big O](./BigORecap.png)
