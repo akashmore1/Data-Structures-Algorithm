@@ -73,3 +73,16 @@ We say that an algorithm is O(f(n)) if the number of simple operations the compu
 ### Big O Graphs for different values:
 
 ![Graph](<./Big(O)graphs.png>)
+
+## Space Complexity
+
+1. We can also use big O notation to analyze space complexity: how much additional memory do we need to allocate in order to run the code in our algorithm?
+2. So far, we've been focusing on time complexity: how can we analyze the runtime of an algorithm as the size of the inputs increases?
+3. We can also use big O notation to analyze space complexity: how much additional memory do we need to allocate in order to run the code in our algorithm?
+4. Sometimes you'll hear the term auxiliary space complexity to refer to space required by the algorithm, not including space taken up by the inputs. Unless otherwise noted, when we talk about space complexity, technically we'll be talking about auxiliary space complexity.
+
+### Rules of thumbs for Space Complexity
+
+1. Most primitives (booleans, numbers, undefined, null) are constant space.
+2. Strings require O(n) space (where n is the string length).
+3. Reference types are generally O( n), where n is the length (for arrays) or the number of keys (for objects).
