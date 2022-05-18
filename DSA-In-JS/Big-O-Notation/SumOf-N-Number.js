@@ -9,7 +9,7 @@ const sumOfNNumbersLoop = (n) => {
   return sum;
 };
 
-console.log(sumOfNNumßbersLoop(1000000000));
+console.log(sumOfNNumbersLoop(1000000000));
 
 // 2nd approach
 const sumOfNNumbersFormula = (n) => {
@@ -17,7 +17,7 @@ const sumOfNNumbersFormula = (n) => {
   return sum;
 };
 
-console.log(sumOfNNumbßersFormula(1000000000));
+console.log(sumOfNNumbersFormula(1000000000));
 
 // Which one of the above is better?
 
