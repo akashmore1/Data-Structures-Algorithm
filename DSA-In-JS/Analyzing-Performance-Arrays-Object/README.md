@@ -26,4 +26,4 @@ Let's spend a couple minutes analyzing the things we do all the time in JS: work
 9. Object.entries(instructor) will return [['firstName', 'kelly'],['isInstructor', true],['favouriteNumbers', [1, 2, 3, 4]]]
 10. hasOwnProperty() has O(1). e.g. instructor.hasOwnProperty('firstName') will return true.
 11. Big O og object methods:
-    ![object-methods](<./BigO(object_Methods).png>)
+    ![object-methods](<./Big(O)-Object-methods.png>)
