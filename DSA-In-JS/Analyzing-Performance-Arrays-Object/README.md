@@ -27,3 +27,17 @@ Let's spend a couple minutes analyzing the things we do all the time in JS: work
 10. hasOwnProperty() has O(1). e.g. instructor.hasOwnProperty('firstName') will return true.
 11. Big O og object methods:
     ![object-methods](<./Big(O)-Object-methods.png>)
+
+## Arrays
+
+1. When we need order, we use arrays.
+2. When we need order we can use singly linked list and doubly linked list, but we will see that in future.
+3. Accessing an element in array has O(1).
+4. Searching an element in an array has O(n).
+5. Inserting or removing an element at the end of array has O(1).
+6. But inserting or removing an element at the beginning of array is costlier. As we will need to index every element in this case.
+7. Inserting or removing an element at the beginning of an array, has O(n).
+
+### Big O of array operations
+
+![O(array operations)](<./Big(O)-array-operations.png>)
