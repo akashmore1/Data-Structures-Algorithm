@@ -13,14 +13,17 @@ const getCountOfEachString = (str) => {
   const charCountObject = {};
 
   for (let char of str) {
-    if (charCountObject.hasOwnProperty(char)) {
-      charCountObject[char] += 1;
-    } else {
-      charCountObject[char] = 1;
+    const lowerCaseChar = char.toLowerCase();
+    if (/[a-z0-9]/.test(lowerCaseChar)) {
+      if (charCountObject.hasOwnProperty(lowerCaseChar)) {
+        charCountObject[lowerCaseChar] += 1;
+      } else {
+        charCountObject[lowerCaseChar] = 1;
+      }
     }
   }
 
   return charCountObject;
 };
 
-console.log(getCountOfEachString("happy"));
+console.log(getCountOfEachString("A happy Holidays Sundays!!!"));

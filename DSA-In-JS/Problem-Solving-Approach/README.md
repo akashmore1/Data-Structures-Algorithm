@@ -43,8 +43,19 @@ Note: many of these strategies are adapted from George Polya, whose book How To 
 2. This forces you to think about the code you'll write before you write it, and helps you catch any lingering conceptual issues or misunderstandings before you dive in and have to worry about details (e.g. language syntax) as well.
    ![solve-simpler](./solve-simpler-problem.png)
 
-3. Simplify
-   1. Find the core difficulty in what you're trying to do
-   2. Temporarily ignore that difficulty
-   3. Write a simplified solution
-   4. Then incorporate that difficulty back in
+### Solve & Simplify
+
+1.  Find the core difficulty in what you're trying to do.
+2.  Temporarily ignore that difficulty.
+3.  Write a simplified solution.
+4.  Then incorporate that difficulty back in.
+
+### Look back and Refactor
+
+1. Can you check the result?
+2. Can you derive the result differently?
+3. Can you understand it at a glance?
+4. Can you use the result or method for some other problem?
+5. Can you improve the performance of your solution?
+6. Can you think of other ways to refactor?
+7. How have other people solved this problem?
