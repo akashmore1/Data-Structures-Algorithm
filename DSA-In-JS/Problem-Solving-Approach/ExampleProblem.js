@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("Hello World!");
-
 // Write a function which takes in a string and returns counts of each character in the string.
 
 const getCountOfEachString = (str) => {

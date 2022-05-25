@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("Hello World!");
-
 // Write a function called "same", which accepts two arrays. The function should return true if every value in the array has it's corresponding value squared in the second array. The frequency of values must be the same.
 
 // Below is nested loop approach, which has complexity of n^2. So this can be considered a naive solution.
