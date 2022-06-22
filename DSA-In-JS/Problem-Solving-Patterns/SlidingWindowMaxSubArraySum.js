@@ -15,13 +15,14 @@ const maxSubArraySum = (arr, num) => {
   }
   let maxSum = tempSum;
 
-  for (let i = 1; i < arr.length - num; i++) {
+  for (let i = 1; i < arr.length - num + 1; i++) {
     tempSum = tempSum - arr[i - 1] + arr[i + num - 1];
     if (tempSum > maxSum) {
       maxSum = tempSum;
     }
+    console.log(tempSum, maxSum);
   }
   return maxSum;
 };
 
-console.log(maxSubArraySum([1, 2, 3, 4, 6, 7, 8, 3, 2, 6, 4, 5, 1], 4));
+console.log(maxSubArraySum([1, 2, 3, 4, 6, 7, 8, 3, 2, 6, 4, 5, 1, 100], 4));
