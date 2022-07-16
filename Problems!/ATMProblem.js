@@ -38,4 +38,4 @@ const getNumberOfNotes = (moneyNumber) => {
   return `Number of 2000 is ${numberOf2000}. Number of 500 is ${numberOf500}. Number of 200 is ${numberOf200}. Number of 100 is ${numberOf100}`;
 };
 
-console.log(getNumberOfNotes(400));
+console.log(getNumberOfNotes(435400));
