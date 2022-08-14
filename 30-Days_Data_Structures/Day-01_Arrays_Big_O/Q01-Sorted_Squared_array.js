@@ -30,8 +30,9 @@ const sortedSquareArray = (arr) => {
   return newSortedSquareArrBrut;
   // ====================================================================================== //
 
-  // ======================== time: (O)n, space: (O)n ======================= //
+  // ======================== Two Pointer {time: (O)n, space: (O)n} ======================= //
   const newSortedSquareArr = [];
+  const reverseArr = [];
   let counter = 0;
   let start = 0;
   let end = arr.length - 1;
@@ -52,14 +53,14 @@ const sortedSquareArray = (arr) => {
       end--;
     }
   }
-  console.log(newSortedSquareArr);
-  const reverseArr = [];
+
   while (counter < length) {
     reverseArr.push(newSortedSquareArr.pop());
     counter++;
   }
 
   return reverseArr;
+  // ====================================================================================== //
 };
 
 console.log(sortedSquareArray([-6, 1, 2, 3, 4]));
