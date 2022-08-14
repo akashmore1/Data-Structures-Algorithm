@@ -13,22 +13,54 @@ const sortedSquareArray = (arr) => {
   }
 
   // ================================= Brute-force method ================================ //
-  const newSortedSquareArr = [];
+  const newSortedSquareArrBrut = [];
   for (let i = 0; i < arr.length; i++) {
-    newSortedSquareArr.push(arr[i] ** 2);
+    newSortedSquareArrBrut.push(arr[i] ** 2);
   }
   // Sort using bubble sort
-  for (let j = newSortedSquareArr.length - 1; j >= 0; j--) {
-    for (let i = 0; i < newSortedSquareArr.length; i++) {
-      if (newSortedSquareArr[i] > newSortedSquareArr[i + 1]) {
-        const temp = newSortedSquareArr[i];
-        newSortedSquareArr[i] = newSortedSquareArr[i + 1];
-        newSortedSquareArr[i + 1] = temp;
+  for (let j = newSortedSquareArrBrut.length - 1; j >= 0; j--) {
+    for (let i = 0; i < newSortedSquareArrBrut.length; i++) {
+      if (newSortedSquareArrBrut[i] > newSortedSquareArrBrut[i + 1]) {
+        const temp = newSortedSquareArrBrut[i];
+        newSortedSquareArrBrut[i] = newSortedSquareArrBrut[i + 1];
+        newSortedSquareArrBrut[i + 1] = temp;
       }
     }
   }
-  return newSortedSquareArr;
+  return newSortedSquareArrBrut;
   // ====================================================================================== //
+
+  // ======================== time: (O)n, space: (O)n ======================= //
+  const newSortedSquareArr = [];
+  let counter = 0;
+  let start = 0;
+  let end = arr.length - 1;
+  const length = arr.length;
+
+  const positiveNum = (num) => {
+    return num < 0 ? num * -1 : num;
+  };
+
+  while (start <= end) {
+    let startNum = positiveNum(arr[start]);
+    let endNum = positiveNum(arr[end]);
+    if (startNum >= endNum) {
+      newSortedSquareArr.push(startNum ** 2);
+      start++;
+    } else {
+      newSortedSquareArr.push(endNum ** 2);
+      end--;
+    }
+  }
+  console.log(newSortedSquareArr);
+  const reverseArr = [];
+  while (counter < length) {
+    reverseArr.push(newSortedSquareArr.pop());
+    counter++;
+  }
+
+  return reverseArr;
 };
 
 console.log(sortedSquareArray([-6, 1, 2, 3, 4]));
+// [-4, -2, 1, 3]
