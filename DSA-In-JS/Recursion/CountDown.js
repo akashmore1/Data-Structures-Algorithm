@@ -1,6 +1,6 @@
 "use strict";
 
-// Write a function which takes a number as input and then
+// Write a function which takes a number as input and then Print all numbers below it till zero.
 
 const countDown = (num) => {
   if (num <= 0) {
