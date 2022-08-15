@@ -19,3 +19,25 @@ const maxAreaBrut = (height) => {
   }
   return area;
 };
+// =========================================================================== //
+
+// ============================= Time O(n) Solution ============================ //
+// This is two pointer approach
+const maxArea = (height) => {
+  let maxArea = 0;
+  let start = 0;
+  let tempArea = 0;
+  let end = height.length - 1;
+  while (start < end) {
+    tempArea = Math.min(height[start], height[end]) * (end - start);
+    if (tempArea > maxArea) {
+      maxArea = tempArea;
+    }
+    if (height[start] <= height[end]) {
+      start++;
+    } else {
+      end--;
+    }
+  }
+  return maxArea;
+};
