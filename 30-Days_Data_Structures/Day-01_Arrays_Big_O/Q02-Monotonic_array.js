@@ -11,6 +11,7 @@ const findMonotonicArray = (nums) => {
   let differenceValue = 0;
   let tempDiff = 0;
 
+  //   Instead of below loop we can directly compare first and last element of array
   while (differenceValue === 0 && index < nums.length - 1) {
     differenceValue = nums[index] - nums[index + 1];
     index++;

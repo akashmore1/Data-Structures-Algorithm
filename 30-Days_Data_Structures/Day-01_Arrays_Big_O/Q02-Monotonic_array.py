@@ -7,6 +7,7 @@ def findMonotonicArray(arr):
     difference_value = 0
     temp_diff = 0
 
+    # Instead of below loop we can directly compare first and last element of array
     while difference_value == 0 and index < len(arr)-1:
         difference_value = arr[index] - arr[index - 1]
         index += 1
