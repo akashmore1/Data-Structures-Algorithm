@@ -21,7 +21,7 @@ const twoSumBrut = (nums, target) => {
     return "No two values add upto target";
   }
 };
-// console.log(twoSumBrut([2, 7, 11, 15], 9));
+console.log(twoSumBrut([2, 7, 11, 15], 9));
 
 // =============================================================================== //
 
@@ -48,6 +48,41 @@ const twoSumWithSort = (nums, target) => {
   const solArr = [nums.indexOf(firstNumber), nums.indexOf(secondNumber)];
   return solArr;
 };
-console.log(twoSumWithSort([3, 3], 6)); // In this case this algorithm doesn't work
+// console.log(twoSumWithSort([3, 3], 6)); // In this case this algorithm doesn't work
 
 // =============================================================================== //
+
+// // ============================ Optimum Solution buggy =============================== //
+// // Using Hash Table
+// const twoSum = (nums, target) => {
+//   let numsObj = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     numsObj[nums[i]] = i;
+//   }
+//   for (key in numsObj) {
+//     let remaining = target - key;
+//     if (numsObj.hasOwnProperty(remaining)) {
+//       return [numsObj[key], numsObj[remaining]];
+//     }
+//   }
+// };
+// console.log(twoSum([3, 3], 6)); // Does not work in this case
+
+// =============================== Best solution using Hash Table ============================= //
+
+const twoSum = (nums, target) => {
+  let hashTable = {};
+  let remainingValue;
+
+  for (let i = 0; i < nums.length; i++) {
+    remainingValue = target - nums[i];
+    if (hashTable.hasOwnProperty(remainingValue)) {
+      return [i, hashTable[remainingValue]];
+    } else {
+      hashTable[nums[i]] = i;
+    }
+  }
+  return [];
+};
+
+console.log(twoSum([2, 7, 11, 15], 9));
