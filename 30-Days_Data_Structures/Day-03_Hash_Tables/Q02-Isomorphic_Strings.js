@@ -4,6 +4,7 @@
 // No two characters may map to the same character, but a character may map to itself.
 
 // =========================== 1 approach O(1), O(1) =========================== //
+// This solution beats 90% in leetcode
 var isIsomorphic = function (s, t) {
   const helperObj_S_T = {};
   const helperObj_T_S = {};
@@ -16,9 +17,6 @@ var isIsomorphic = function (s, t) {
     } else {
       helperObj_S_T[s[i]] = t[i];
     }
-  }
-
-  for (let i = 0; i < t.length; i++) {
     if (helperObj_T_S.hasOwnProperty(t[i])) {
       if (helperObj_T_S[t[i]] !== s[i]) {
         return false;
@@ -27,7 +25,6 @@ var isIsomorphic = function (s, t) {
       helperObj_T_S[t[i]] = s[i];
     }
   }
-
   return true;
 };
 // ================================================================================== //
