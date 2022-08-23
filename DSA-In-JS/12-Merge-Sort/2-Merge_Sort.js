@@ -7,7 +7,7 @@
 
 // first write a function which merge two sorted arrays
 const merge = (arr1, arr2) => {
-  const totalLength = arr1.length + arr2.length;
+  const totalLength = arr1?.length + arr2?.length;
   const mergedArray = [];
   let i = 0;
   let j = 0;
@@ -33,4 +33,16 @@ const merge = (arr1, arr2) => {
   return mergedArray;
 };
 
-const mergeSort = (arr) => {};
+const mergeSort = (arr) => {
+  if (arr.length === 1 || arr.length === 0) {
+    return arr;
+  }
+  const mid = Math.floor(arr.length / 2);
+
+  const left = mergeSort(arr.slice(0, mid));
+  const right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
+};
+
+mergeSort([1, 2, 66, 455, 3, 7, 55, 44, 23, 42, 88, 5, 33, 9, 452, 32546, 753]);
