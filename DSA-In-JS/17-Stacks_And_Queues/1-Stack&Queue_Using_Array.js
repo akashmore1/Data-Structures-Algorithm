@@ -2,7 +2,13 @@
 
 // stack   : LIFO
 
-const arr = [];
+const arrStack = [];
 
-arr.push(1);
-arr.pop();
+arrStack.push(1);
+arrStack.pop();
+
+// Queue   : FIFO
+
+const arrQueue = [];
+arrQueue.push("1");
+arrQueue.shift();
