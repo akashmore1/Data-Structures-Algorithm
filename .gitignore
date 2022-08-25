@@ -1,3 +1,9 @@
 /.vscode
 **/.DS_Store
 index.html
+
+misc.xml
+modules.xml
+vcs.xml
+profiles_settings.xml
+Data-Structures-Algorithm.iml
