@@ -35,7 +35,46 @@ class BinaryHeap {
   //   compare with both children
   //   Find Highest child and swap
   //   Repeat this process until no child with max value
-  extractMax() {}
+  extractMax() {
+    const max = this.values[0];
+    const end = this.values.pop();
+    this.values[0] = end;
+    this.bubbleDown();
+    return max;
+  }
+
+  bubbleDown() {
+    let idx = 0;
+    let element = this.values[0];
+    const length = this.values.length;
+    while (true) {
+      let leftChildIdx = idx * 2 + 1;
+      let rightChildIdx = idx * 2 + 2;
+      let leftChild, rightChild;
+      let swap = null;
+
+      if (leftChildIdx < length) {
+        leftChild = this.values[leftChildIdx];
+        if (leftChild > element) {
+          swap = leftChildIdx;
+        }
+      }
+
+      if (rightChildIdx < length) {
+        rightChild = this.values[rightChildIdx];
+
+        if (rightChild > element && rightChild > leftChild) {
+          swap = rightChildIdx;
+        }
+      }
+
+      if (swap === null) break;
+
+      this.values[idx] = this.values[swap];
+      this.values[swap] = element;
+      idx = swap;
+    }
+  }
 }
 
 const heap = new BinaryHeap();
