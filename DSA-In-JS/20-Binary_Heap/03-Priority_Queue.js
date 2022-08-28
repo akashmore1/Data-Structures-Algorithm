@@ -30,50 +30,50 @@ class MinBinaryHeap {
     return this;
   }
 
-  //   extractMin() {
-  //     const min = this.values[0];
-  //     if (this.values.length > 1) {
-  //       const element = this.values.pop();
-  //       this.values[0] = element;
-  //     }
-  //     this.bubbleDown();
+  extractMin() {
+    const min = this.values[0];
+    if (this.values.length > 1) {
+      const element = this.values.pop();
+      this.values[0] = element;
+    }
+    this.bubbleDown();
 
-  //     return min;
-  //   }
+    return min;
+  }
 
-  //   bubbleDown() {
-  //     let index = 0;
-  //     let length = this.values.length;
-  //     let element = this.values[0];
+  bubbleDown() {
+    let index = 0;
+    let length = this.values.length;
+    let element = this.values[0];
 
-  //     while (true) {
-  //       let leftChildIndex = index * 2 + 1;
-  //       let rightChildIndex = index * 2 + 2;
-  //       let leftChild, rightChild;
-  //       let swap = null;
+    while (true) {
+      let leftChildIndex = index * 2 + 1;
+      let rightChildIndex = index * 2 + 2;
+      let leftChild, rightChild;
+      let swap = null;
 
-  //       if (leftChildIndex < length) {
-  //         leftChild = this.values[leftChildIndex];
-  //         if (leftChild < element) {
-  //           swap = leftChildIndex;
-  //         }
-  //       }
+      if (leftChildIndex < length) {
+        leftChild = this.values[leftChildIndex];
+        if (leftChild < element) {
+          swap = leftChildIndex;
+        }
+      }
 
-  //       if (rightChildIndex < length) {
-  //         rightChild = this.values[rightChildIndex];
-  //         if (rightChild < element && rightChild < leftChild) {
-  //           swap = rightChildIndex;
-  //         }
-  //       }
+      if (rightChildIndex < length) {
+        rightChild = this.values[rightChildIndex];
+        if (rightChild < element && rightChild < leftChild) {
+          swap = rightChildIndex;
+        }
+      }
 
-  //       if (swap === null) break;
+      if (swap === null) break;
 
-  //       this.values[index] = this.values[swap];
-  //       this.values[swap] = element;
+      this.values[index] = this.values[swap];
+      this.values[swap] = element;
 
-  //       index = swap;
-  //     }
-  //   }
+      index = swap;
+    }
+  }
 }
 
 const heap = new MinBinaryHeap();
