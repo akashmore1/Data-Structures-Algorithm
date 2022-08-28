@@ -1,5 +1,10 @@
 "use strict";
 
+// Priority queue is a data structure where each element has a priority
+// Priority queue have a value and a priority
+// It is arranged in a way such that element with highest priority will be extracted first
+// Priority queue can be constructed using min binary heap
+
 // First build min binary heap
 
 class MinBinaryHeap {
