@@ -1,3 +1,5 @@
+"use strict";
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -27,6 +29,21 @@ class DoublyLinkedList {
     this.tail = newNode;
     this.length++;
     return this;
+  }
+
+  pop() {
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+      return this;
+    }
+
+    let last = this.tail;
+    this.tail = last.prev;
+    this.tail.next = null;
+    last.prev = null;
+    this.length--;
+    return last;
   }
 }
 
