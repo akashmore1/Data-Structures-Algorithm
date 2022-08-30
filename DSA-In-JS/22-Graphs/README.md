@@ -11,3 +11,10 @@
 4. Visual Hierarchy
 5. File System Optimizations
 6. EVERYWHERE!
+
+## ESSENTIAL GRAPH TERMS
+
+1. Vertex - a node
+2. Edge - connection between nodes
+3. Weighted/Unweighted - values assigned to distances between vertices
+4. Directed/Undirected - directions assigned to distanced between vertices
