@@ -19,9 +19,18 @@ class Graph {
     this.adjacencyList[v2].splice(this.adjacencyList[v2].indexOf(v1), 1);
     return this;
   }
+
+  //   Loop throught vertex and pop()
+  // Go in poped element and remove original vertex
+  removeVertex() {}
 }
 
 const g = new Graph();
 g.addVertex("India");
 g.addVertex("France");
+g.addVertex("USA");
+g.addVertex("Japan");
 g.addEdge("India", "France");
+g.addEdge("USA", "France");
+g.addEdge("Japan", "France");
+g.addEdge("India", "USA");
