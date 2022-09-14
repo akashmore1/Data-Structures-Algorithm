@@ -27,8 +27,10 @@ const powerSet = (nums) => {
     subset.push(nums[i]);
     helper(nums, i + 1, subset);
 
-    subset.pop;
+    subset.pop();
   };
+
+  helper(nums, 0, []);
 
   return result;
 };
