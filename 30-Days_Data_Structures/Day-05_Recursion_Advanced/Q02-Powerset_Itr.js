@@ -13,24 +13,24 @@
 6. repeat this process for every element in input array
 */
 
-// const getPowerSet = (nums) => {
-//   const powerSet = [];
+const getPowerSet = (nums) => {
+  const powerSet = [];
 
-//   powerSet.push([]);
+  powerSet.push([]);
 
-//   let tempArr = [];
-//   for (let i = 0; i < nums.length; i++) {
-//     let mockPowerSet = [...powerSet];
-//     let length = mockPowerSet.length;
-//     for (let j = 0; j < length; j++) {
-//       tempArr = [...powerSet[j]];
-//       tempArr.push(nums[i]);
-//       powerSet.push(tempArr);
-//       tempArr = [];
-//     }
-//   }
+  let tempArr = [];
+  for (let i = 0; i < nums.length; i++) {
+    let mockPowerSet = [...powerSet];
+    let length = mockPowerSet.length;
+    for (let j = 0; j < length; j++) {
+      tempArr = [...powerSet[j]];
+      tempArr.push(nums[i]);
+      powerSet.push(tempArr);
+      tempArr = [];
+    }
+  }
 
-//   return powerSet;
-// };
+  return powerSet;
+};
 
-// console.log(getPowerSet([1, 2, 3, 4]));
+console.log(getPowerSet([1, 2, 3, 4]));
