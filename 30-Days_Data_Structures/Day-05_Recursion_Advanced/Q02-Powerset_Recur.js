@@ -10,3 +10,25 @@
 5. pop() from subset
 6. return result array
 */
+
+const powerSet = (nums) => {
+  const result = [];
+
+  const helper = (nums, i, subset) => {
+    if (i === nums.length) {
+      result.push(subset.slice());
+      return;
+    }
+
+    // don't add
+    helper(nums, i + 1, subset);
+
+    // add
+    subset.push(nums[i]);
+    helper(nums, i + 1, subset);
+
+    subset.pop;
+  };
+
+  return result;
+};
