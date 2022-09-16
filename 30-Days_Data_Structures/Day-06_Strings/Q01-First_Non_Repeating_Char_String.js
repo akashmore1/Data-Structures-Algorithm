@@ -14,8 +14,33 @@ const findFirstNonRepeatingChar = (str) => {
   }
 };
 
+findFirstNonRepeatingChar(
+  "aakascsdvevevwswfasdawdrwqfopobdofibhiuehgkerjgewjmbjahsdcahckwjfhchkwefhkwefjlkjljkdzkjcwsjkfhsh"
+);
+
+// Optimised
+
+const nonRepeatingCharBest = (str) => {
+  const strCount = {};
+  let uniqueCharIndex = Infinity;
+
+  for (let i = 0; i < str.length; i++) {
+    if (strCount[str[i]]) {
+      strCount[str[i]] += 1;
+    } else {
+      strCount[str[i]] = 1;
+    }
+  }
+
+  for (let i = 0; i < str.length; i++) {
+    if (strCount[str[i]] === 1 && i < uniqueCharIndex) {
+      uniqueCharIndex = i;
+    }
+  }
+
+  return `${uniqueCharIndex}, ${str[uniqueCharIndex]}`;
+};
+
 console.log(
-  findFirstNonRepeatingChar(
-    "aakascsdvevevwswfasdawdrwqfopobdofibhiuehgkerjgewjmbjahsdcahckwjfhchkwefhkwefjlkjljkdzkjcwsjkfhsh"
-  )
+  nonRepeatingCharBest("akashwadqwdiuhidcshdciuhwqeqjkdnkjndjvjnfpe")
 );
