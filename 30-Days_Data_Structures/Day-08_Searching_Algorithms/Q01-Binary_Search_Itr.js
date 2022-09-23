@@ -11,21 +11,21 @@
 7. If middle of array is equal to target value, return middle
 */
 
-// var search = function (nums, target) {
-//   let start = 0;
-//   let end = nums.length - 1;
-//   let middle = Math.floor((start + end) / 2);
+const search = function (nums, target) {
+  let start = 0;
+  let end = nums.length - 1;
+  let middle = Math.floor((start + end) / 2);
 
-//   while (nums[middle] !== target) {
-//     if (nums[middle] < target) {
-//       start = middle + 1;
-//     } else {
-//       end = middle - 1;
-//     }
+  while (nums[middle] !== target) {
+    if (nums[middle] < target) {
+      start = middle + 1;
+    } else {
+      end = middle - 1;
+    }
 
-//     middle = Math.floor((start + end) / 2);
-//     if (start > end) return -1;
-//   }
+    middle = Math.floor((start + end) / 2);
+    if (start > end) return -1;
+  }
 
-//   return middle;
-// };
+  return middle;
+};
