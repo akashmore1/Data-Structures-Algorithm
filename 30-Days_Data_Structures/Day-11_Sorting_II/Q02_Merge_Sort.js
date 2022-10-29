@@ -29,4 +29,17 @@ const mergeSortedArrays = (arr1, arr2) => {
   return result;
 };
 
-console.log(mergeSortedArrays([1, 3], [2, 4, 6, 8]));
+const mergeSort = (arr) => {
+  if (arr.length === 1 || arr.length === 0) {
+    return arr;
+  }
+
+  let middle = Math.floor(arr.length / 2);
+
+  const left = mergeSort(arr.slice(0, middle));
+  const right = mergeSort(arr.slice(middle));
+
+  return mergeSortedArrays(left, right);
+};
+
+console.log(mergeSort([1, 3, 2, 4, 6, 8, -3, 7]));
